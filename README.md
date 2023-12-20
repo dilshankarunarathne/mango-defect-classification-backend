@@ -19,6 +19,7 @@ It has OAuth2 authentication and JWT token generation. It also has a basic user 
 - uvicorn
 - tensorflow
 - PIL
+- numpy
 
 ## Contributing
 
