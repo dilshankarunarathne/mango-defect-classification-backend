@@ -49,4 +49,4 @@ def predict_local(img_path):
     # Get the class with the highest probability
     predicted_class = np.argmax(prediction)
 
-    return predicted_class
+    return classes[predicted_class]
