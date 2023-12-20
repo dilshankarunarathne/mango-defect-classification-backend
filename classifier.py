@@ -22,5 +22,4 @@ def predict(img_path):
     # Get the class with the highest probability
     predicted_class = np.argmax(prediction)
 
-    # Print the predicted class
-    print(predicted_class)
+    return predicted_class
