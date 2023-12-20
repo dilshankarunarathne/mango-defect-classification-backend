@@ -1,5 +1,7 @@
 from fastapi import APIRouter, File, UploadFile
 
+from classifier import predict
+
 router = APIRouter(
     prefix="/api/classify",
     tags=["classify"],
