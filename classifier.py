@@ -30,7 +30,7 @@ async def predict(file: UploadFile):
     # Get the class with the highest probability
     predicted_class = np.argmax(prediction)
 
-    return predicted_class
+    return classes[predicted_class]
 
 
 def predict_local(img_path):
@@ -49,4 +49,4 @@ def predict_local(img_path):
     # Get the class with the highest probability
     predicted_class = np.argmax(prediction)
 
-    return classes[predicted_class]
+    return predicted_class
