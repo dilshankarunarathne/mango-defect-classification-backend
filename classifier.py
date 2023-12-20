@@ -22,6 +22,9 @@ async def predict(file: UploadFile):
     # Convert the image to numpy array
     img_array = np.asarray(image)
     img_array = np.expand_dims(img_array, axis=0)
+
+    # Convert the numpy array to float64 before performing the division operation
+    img_array = img_array.astype('float64')
     img_array /= 255.
 
     # Make a prediction
