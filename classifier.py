@@ -8,7 +8,7 @@ import io
 # Load the saved model
 model = tf.keras.models.load_model('mango.h5')
 
-classes = ['healthy', 'diseased']
+classes = ['Alternaria', 'Anthracnose', 'Black Mould Rot', 'Healthy', 'Stem end Rot']
 
 
 async def predict(file: UploadFile):
