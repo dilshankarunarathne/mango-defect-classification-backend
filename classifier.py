@@ -9,3 +9,7 @@ model = tf.keras.models.load_model('mango.h5')
 img_path = 'test.jpg'  # replace with the path of your image
 img = image.load_img(img_path, target_size=(150, 150))
 
+# Preprocess the image
+img_array = image.img_to_array(img)
+img_array = np.expand_dims(img_array, axis=0)
+img_array /= 255.
