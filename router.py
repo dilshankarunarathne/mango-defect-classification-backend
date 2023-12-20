@@ -8,5 +8,5 @@ router = APIRouter(
 
 
 @router.post("/")
-async def classify():
+async def classify(file: UploadFile = File(...)):
     return {"message": "Hello World"}
