@@ -1,9 +1,34 @@
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 import numpy as np
+from fastapi import UploadFile
+from PIL import Image
+import io
 
 # Load the saved model
 model = tf.keras.models.load_model('mango.h5')
+
+
+async def predict(file: UploadFile):
+    # Read the image file
+    contents = await file.read()
+    image = Image.open(io.BytesIO(contents))
+
+    # Resize the image
+    image = image.resize((150, 150))
+
+    # Convert the image to numpy array
+    img_array = np.asarray(image)
+    img_array = np.expand_dims(img_array, axis=0)
+    img_array /= 255.
+
+    # Make a prediction
+    prediction = model.predict(img_array)
+
+    # Get the class with the highest probability
+    predicted_class = np.argmax(prediction)
+
+    return predicted_class
 
 
 def predict_local(img_path):
