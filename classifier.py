@@ -6,7 +6,7 @@ import numpy as np
 model = tf.keras.models.load_model('mango.h5')
 
 
-def predict(img_path):
+def predict_local(img_path):
     # Load the image
     # img_path = 'test.jpg'
     img = image.load_img(img_path, target_size=(150, 150))
