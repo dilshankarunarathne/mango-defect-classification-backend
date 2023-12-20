@@ -8,6 +8,8 @@ import io
 # Load the saved model
 model = tf.keras.models.load_model('mango.h5')
 
+classes = ['healthy', 'diseased']
+
 
 async def predict(file: UploadFile):
     # Read the image file
