@@ -1,6 +1,7 @@
-# FastAPI Project Template
+# Defect Mango Identification and Classification
 
-The REST API template repository for a FastAPI back-end project.
+This is a project to identify and classify mango defects using machine learning. This project is a part of the 
+final year project of the Department of Computer Science, Eastern University of Sri Lanka.
 
 [![Version](https://img.shields.io/badge/version-1.0-brightgreen.svg)](https://pypi.org/project/ad-topic-recommender/)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
