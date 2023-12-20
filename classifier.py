@@ -17,3 +17,5 @@ img_array /= 255.
 # Make a prediction
 prediction = model.predict(img_array)
 
+# Get the class with highest probability
+predicted_class = np.argmax(prediction)
