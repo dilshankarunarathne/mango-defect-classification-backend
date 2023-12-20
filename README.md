@@ -17,6 +17,7 @@ It has OAuth2 authentication and JWT token generation. It also has a basic user 
 - Python 3.11
 - fastapi
 - uvicorn
+- tensorflow
 
 ## Contributing
 
