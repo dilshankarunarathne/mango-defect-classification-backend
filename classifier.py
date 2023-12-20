@@ -34,22 +34,3 @@ async def predict(file: UploadFile):
     predicted_class = np.argmax(prediction)
 
     return classes[predicted_class]
-
-
-def predict_local(img_path):
-    # Load the image
-    # img_path = 'test.jpg'
-    img = image.load_img(img_path, target_size=(150, 150))
-
-    # Preprocess the image
-    img_array = image.img_to_array(img)
-    img_array = np.expand_dims(img_array, axis=0)
-    img_array /= 255.
-
-    # Make a prediction
-    prediction = model.predict(img_array)
-
-    # Get the class with the highest probability
-    predicted_class = np.argmax(prediction)
-
-    return predicted_class
