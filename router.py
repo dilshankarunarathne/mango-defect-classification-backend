@@ -5,7 +5,7 @@ from classifier import predict
 router = APIRouter(
     prefix="/api/classify",
     tags=["classify"],
-    responses={404: {"description": "The requested page was not found"}},
+    responses={404: {"description": "The requested endpoint was not found"}},
 )
 
 
