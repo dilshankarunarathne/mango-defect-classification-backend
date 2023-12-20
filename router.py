@@ -12,4 +12,4 @@ router = APIRouter(
 @router.post("/")
 async def classify(file: UploadFile = File(...)):
     prediction = await predict(file)
-    return {"message": "Hello World"}
+    return {"prediction": "Hello World"}
