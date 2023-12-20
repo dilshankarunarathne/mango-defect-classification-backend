@@ -5,20 +5,22 @@ import numpy as np
 # Load the saved model
 model = tf.keras.models.load_model('mango.h5')
 
-# Load the image
-img_path = 'test.jpg'
-img = image.load_img(img_path, target_size=(150, 150))
 
-# Preprocess the image
-img_array = image.img_to_array(img)
-img_array = np.expand_dims(img_array, axis=0)
-img_array /= 255.
+def predict():
+    # Load the image
+    img_path = 'test.jpg'
+    img = image.load_img(img_path, target_size=(150, 150))
 
-# Make a prediction
-prediction = model.predict(img_array)
+    # Preprocess the image
+    img_array = image.img_to_array(img)
+    img_array = np.expand_dims(img_array, axis=0)
+    img_array /= 255.
 
-# Get the class with the highest probability
-predicted_class = np.argmax(prediction)
+    # Make a prediction
+    prediction = model.predict(img_array)
 
-# Print the predicted class
-print(predicted_class)
+    # Get the class with the highest probability
+    predicted_class = np.argmax(prediction)
+
+    # Print the predicted class
+    print(predicted_class)
