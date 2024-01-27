@@ -4,6 +4,7 @@ import numpy as np
 from fastapi import UploadFile
 from PIL import Image
 import io
+from joblib import load
 
 # Load the saved model
 model = tf.keras.models.load_model('mango.h5')
