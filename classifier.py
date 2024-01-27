@@ -9,8 +9,11 @@ from joblib import load
 # Load the saved model
 model = tf.keras.models.load_model('mango.h5')
 
-# classes = ['Alternaria', 'Anthracnose', 'Black Mould Rot', 'Healthy', 'Stem end Rot']
-classes = ['Not Consumable', 'Not Consumable', 'Not Consumable', 'Consumable', 'Not Consumable']
+# Load the label encoder
+label_encoder = load('label_encoder.joblib')
+
+# Get the classes
+classes = list(label_encoder.classes_)
 
 
 async def predict(file: UploadFile):
